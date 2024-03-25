@@ -227,7 +227,7 @@ function generuotiSlaptazodi() {
   }
 
   slaptazodis = slaptazodis.split('').sort(() => Math.random() - 0.5).join('')
-  console.log(slaptazodis); // Išvedame slaptažodį į terminalą
+  console.log(slaptazodis)
 }
 
-generuotiSlaptazodi(); // Iškviečiame funkciją
+generuotiSlaptazodi()
