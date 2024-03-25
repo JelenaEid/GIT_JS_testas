@@ -87,7 +87,7 @@ function konvertuoti() {
     <p>Minutės: ${minutes}</p>
     <p>Valandos: ${valandos}</p>
     <p>Dienos: ${dienos}</p>`
-  
+
   document.getElementById('rezultatai').innerHTML = rezultatai
 }
 
@@ -115,10 +115,10 @@ dešimties neturėtų būti brūkšniuko.
 let numbers = ''
 
 for (let i = 1; i <= 10; i++) {
-    numbers += i     
-    if (i !== 10) {
-        numbers += '-'
-    }
+  numbers += i
+  if (i !== 10) {
+    numbers += '-'
+  }
 }
 console.log(numbers)
 
@@ -181,3 +181,53 @@ slaptažodį. Slaptažodyje privalo būti bent po vieną: didžioji raidė,
 mažoji raidė, skaičius, specialusis simbolis. Visi slaptažodžio
 simboliai privalo būti atsitiktiniai ir atsitiktine tvarka.
 */
+
+
+// versija su HTML ir CSS Irgi veikia ===============================================
+
+// function generuotiSlaptazodi() {
+//   const didziosiosRaides = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+//   const mazosiosRaides = 'abcdefghijklmnopqrstuvwxyz'
+//   const skaiciai = '0123456789'
+//   const specialusSimboliai = '!@#$%^&*()-_+=<>?'
+
+//   let slaptazodis = ''
+
+//   slaptazodis += didziosiosRaides[Math.floor(Math.random() * didziosiosRaides.length)]
+//   slaptazodis += mazosiosRaides[Math.floor(Math.random() * mazosiosRaides.length)]
+//   slaptazodis += skaiciai[Math.floor(Math.random() * skaiciai.length)];
+//   slaptazodis += specialusSimboliai[Math.floor(Math.random() * specialusSimboliai.length)]
+
+//   const galimiSimboliai = didziosiosRaides + mazosiosRaides + skaiciai + specialusSimboliai
+//   for (let i = 4; i < 12; i++) {
+//     slaptazodis += galimiSimboliai[Math.floor(Math.random() * galimiSimboliai.length)]
+//   }
+
+//   slaptazodis = slaptazodis.split('').sort(() => Math.random() - 0.5).join('')
+//   document.getElementById('slaptazodis').value = slaptazodis
+// }
+
+
+function generuotiSlaptazodi() {
+  const didziosiosRaides = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const mazosiosRaides = 'abcdefghijklmnopqrstuvwxyz'
+  const skaiciai = '0123456789'
+  const specialusSimboliai = '!@#$%^&*()-_+=<>?'
+
+  let slaptazodis = ''
+
+  slaptazodis += didziosiosRaides[Math.floor(Math.random() * didziosiosRaides.length)]
+  slaptazodis += mazosiosRaides[Math.floor(Math.random() * mazosiosRaides.length)]
+  slaptazodis += skaiciai[Math.floor(Math.random() * skaiciai.length)]
+  slaptazodis += specialusSimboliai[Math.floor(Math.random() * specialusSimboliai.length)]
+
+  const galimiSimboliai = didziosiosRaides + mazosiosRaides + skaiciai + specialusSimboliai
+  for (let i = 4; i < 12; i++) {
+    slaptazodis += galimiSimboliai[Math.floor(Math.random() * galimiSimboliai.length)]
+  }
+
+  slaptazodis = slaptazodis.split('').sort(() => Math.random() - 0.5).join('')
+  console.log(slaptazodis); // Išvedame slaptažodį į terminalą
+}
+
+generuotiSlaptazodi(); // Iškviečiame funkciją
