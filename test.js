@@ -11,7 +11,7 @@ function eurosToDollars(euros) {
   return dollars
 }
 
-const bentkiekEuro = Math.floor(Math.random() * 1000) + 1  //atsitiktinis kikis euro
+const bentkiekEuro = Math.floor(Math.random() * 1000) + 1  //atsitiktinis kiekis euro
 const dollars = eurosToDollars(bentkiekEuro)  // 
 console.log(bentkiekEuro + " EUR yra " + dollars.toFixed(2) + " USD") 
 
