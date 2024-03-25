@@ -81,13 +81,24 @@ for (let i = 1; i <= 5; i++) {
     }
     console.log(linija);
 }
-
-
-
-
 /*
 8. Parašykite kodą, kuris apskaičiuos kiek liko dienų iki Kalėdų.
 */
+function dienuIkiKaledu() {  //new datos objektas 
+  const siandien = new Date() //sios dienos data
+  const Kaledos = new Date(siandien.getFullYear(), 11, 25) //new datos objektas Kaledos (0 - sausis, 11 - gruodis)
+
+  if (siandien.getMonth() === 11 && siandien.getDate() > 25) { //tikriname ar Kaledos parametrai jau buvo --> 11 , 25 
+      Kaledos.setFullYear(Kaledos.getFullYear() + 1) // jei buvo pridedami dar 1 kalendorini metai
+  }
+  
+  const vienaDiena = 1000 * 60 * 60 * 24; // vienos deinos parametras iki milisekundziu
+  const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ie Kledos
+  return dienosIkiKaledu
+}
+
+const likoIkiKaledu = dienuIkiKaledu()
+console.log(`Iki Kalėdų liko ${likoIkiKaledu} dienų.`)
 
 /*
 9. Parašykite kodą, kuris apjungia masyvo duomenis į vieną
