@@ -58,12 +58,12 @@ function skaiciuotiBMI() {
     klasifikacija = 'Viršsvoris'
   }
 
-  const rezultatai = `
+  const rezultatai1 = `
     <h2>Rezultatai:</h2>
     <p>BMI: ${bmi.toFixed(2)}</p>
     <p>Klasifikacija: ${klasifikacija}</p>
   `
-  document.getElementById('rezultatai1').innerHTML = rezultatai
+  document.getElementById('rezultatai1').innerHTML = rezultatai1
 }
 
 /*
