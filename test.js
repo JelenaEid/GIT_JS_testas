@@ -57,12 +57,12 @@ dienomis.
 */
 
 function konvertuoti() {
-  const amzius = parseInt(document.getElementById('amzius').value);
+  const amzius = parseInt(document.getElementById('amzius').value)
 
-  const sekundes = amzius * 365 * 24 * 60 * 60;
-  const minutes = amzius * 365 * 24 * 60;
-  const valandos = amzius * 365 * 24;
-  const dienos = amzius * 365;
+  const sekundes = amzius * 365 * 24 * 60 * 60
+  const minutes = amzius * 365 * 24 * 60
+  const valandos = amzius * 365 * 24
+  const dienos = amzius * 365
 
   const rezultatai = `
     <h2>Rezultatai:</h2>
@@ -72,7 +72,7 @@ function konvertuoti() {
     <p>Valandos: ${valandos}</p>
     <p>Dienos: ${dienos}</p>`
   
-  document.getElementById('rezultatai').innerHTML = rezultatai;
+  document.getElementById('rezultatai').innerHTML = rezultatai
 }
 
 /*
@@ -83,11 +83,11 @@ duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 function tempKeitimas(laipsniai) {
   let oras;
   if (laipsniai == "C") {
-    oras = document.getElementById("c").value * 9 / 5 + 32;
-    document.getElementById("f").value = Math.round(oras);
+    oras = document.getElementById("c").value * 9 / 5 + 32
+    document.getElementById("f").value = Math.round(oras)
   } else {
-    oras = (document.getElementById("f").value - 32) * 5 / 9;
-    document.getElementById("c").value = Math.round(oras);
+    oras = (document.getElementById("f").value - 32) * 5 / 9
+    document.getElementById("c").value = Math.round(oras)
   }
 }
 
@@ -96,13 +96,15 @@ function tempKeitimas(laipsniai) {
 1-2-3-4-5-6-7-8-9-10 vienoje eilutėje. Prieš vienetą ir po
 dešimties neturėtų būti brūkšniuko.
 */
+let numbers = ''
 
-
-
-
-
-
-
+for (let i = 1; i <= 10; i++) {
+    numbers += i     
+    if (i !== 10) {
+        numbers += '-'
+    }
+}
+console.log(numbers)
 
 /*
 7. Panaudokite for ciklus, kad sukurtumėte tokį vaizdą konsolėje.
