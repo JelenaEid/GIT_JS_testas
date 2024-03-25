@@ -12,17 +12,8 @@ function eurosToDollars(euros) {
 }
 
 const bentkiekEuro = Math.floor(Math.random() * 1000) + 1  //atsitiktinis kiekis euro
-const dollars = eurosToDollars(bentkiekEuro)  // 
+const dollars = eurosToDollars(bentkiekEuro)  
 console.log(bentkiekEuro + " EUR yra " + dollars.toFixed(2) + " USD") 
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -31,6 +22,16 @@ Sugeneruokite atsitiktinį skaičių (dolerių sumą) nuo 1 iki 1000.
 Pritaikykite savo sukurtą funkciją ir išspausdinkite atitikmenį
 eurais.
 */
+
+
+
+
+
+
+
+
+
+
 
 /*
 3. Parašykite programą, kuri suskaičiuotų žmogaus BMI (body
@@ -72,6 +73,17 @@ dešimties neturėtų būti brūkšniuko.
 ****
 *****
 */
+
+for (let i = 1; i <= 5; i++) {
+    let linija = '';
+    for (let zvaigzdute = 1; zvaigzdute <= i; zvaigzdute++) {
+        linija += '*';
+    }
+    console.log(linija);
+}
+
+
+
 
 /*
 8. Parašykite kodą, kuris apskaičiuos kiek liko dienų iki Kalėdų.
