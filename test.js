@@ -6,8 +6,8 @@ doleriais.
 */
 
 function eurosToDollars(euros) {
-  const valiutukuras = 1.08 // https://www.bankai.lt/valiutos/valiutu-kursai/usd
-  const dollars = euros * valiutukuras
+  const valiutukursas = 1.08 // https://www.bankai.lt/valiutos/valiutu-kursai/usd
+  const dollars = euros * valiutukursas
   return dollars
 }
 
