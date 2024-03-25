@@ -93,7 +93,7 @@ function dienuIkiKaledu() {  //new datos objektas
   }
   
   const vienaDiena = 1000 * 60 * 60 * 24; // vienos deinos parametras iki milisekundziu
-  const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ie Kledos
+  const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ir Kaledos
   return dienosIkiKaledu
 }
 
@@ -106,6 +106,21 @@ tekstinę eilutę. Turėtumėte gauti tokį rezultatą:
 Tomas,Dainius,Paulius,Jonas
 Tomas+Dainius+Paulius+Jonas
 */
+
+let vardai = ["Tomas", "Dainius", "Paulius", "Jonas"]
+
+let sintaksisKalblelis = vardai.join(",")
+console.log(sintaksisKalblelis)
+
+let sintaksisPliusas = vardai.join("+")
+console.log(sintaksisPliusas)
+
+
+
+
+
+
+
 
 /*
 10. Parašykite kodą, kuris sugeneruos dvylikos simbolių
