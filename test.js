@@ -44,20 +44,43 @@ Normalu = 18.5 <= BMI < 25
 Per mažas svoris = BMI < 18.5
 */
 
+
+
+
+
+
+
+
+
+
+
 /*
 4. Parašykite programą, kuri iš duoto žmogaus amžiaus metais
 pasakytų kiek tai yra sekundėmis, minutėmis, valandomis,
 dienomis.
 */
 
+
+
+
+
+
+
 /*
 5. Parašykite programą, kuri konvertuos termometro
 duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 */
 
-
-
-
+    function tempKeitimas(laipsniai) {
+      let oras;
+      if (laipsniai == "C") {
+          oras = document.getElementById("c").value * 9/5 + 32;
+          document.getElementById("f").value = Math.round(oras);
+      } else {
+          oras = (document.getElementById("f").value - 32) * 5/9;
+          document.getElementById("c").value = Math.round(oras);
+      }
+  }
 
 /*
 6. Sukurkite kodą, kuris išspausdins į konsolę
