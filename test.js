@@ -43,12 +43,28 @@ Normalu = 18.5 <= BMI < 25
 Per mažas svoris = BMI < 18.5
 */
 
+function skaiciuotiBMI() {
+  const svoris = parseFloat(document.getElementById('svoris').value)
+  const ugis = parseFloat(document.getElementById('ugis').value) / 100
 
+  const bmi = svoris / (ugis * ugis)
+  let klasifikacija
 
+  if (bmi < 18.5) {
+    klasifikacija = 'Per mažas svoris'
+  } else if (bmi >= 18.5 && bmi < 25) {
+    klasifikacija = 'Normalus svoris'
+  } else {
+    klasifikacija = 'Viršsvoris'
+  }
 
-
-
-
+  const rezultatai = `
+    <h2>Rezultatai:</h2>
+    <p>BMI: ${bmi.toFixed(2)}</p>
+    <p>Klasifikacija: ${klasifikacija}</p>
+  `
+  document.getElementById('rezultatai1').innerHTML = rezultatai
+}
 
 /*
 4. Parašykite programą, kuri iš duoto žmogaus amžiaus metais
@@ -134,7 +150,7 @@ function dienuIkiKaledu() {  //new datos objektas
     Kaledos.setFullYear(Kaledos.getFullYear() + 1) // jei buvo pridedami dar 1 kalendorini metai
   }
 
-  const vienaDiena = 1000 * 60 * 60 * 24; // vienos deinos parametras iki milisekundziu
+  const vienaDiena = 1000 * 60 * 60 * 24 // vienos deinos parametras iki milisekundziu
   const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ir Kaledos
   return dienosIkiKaledu
 }

@@ -7,7 +7,21 @@
   <link href="test.css" rel="stylesheet">
 </head>
 <body>
-   <!-- 4 uzduotis ---------------------->
+   <!-- 3 uzduotis--Kuno mase--------------------->
+  <div class="mase">
+     <h1>BMI skaičiuoklė</h1>
+    <label for="svoris">Svoris (kg):</label>
+    <input type="number" id="svoris">
+    <br>
+    <label for="ugis">Ūgis (cm):</label> 
+    <input type="number" id="ugis">
+    <br>
+    <button onclick="skaiciuotiBMI()">Skaičiuoti BMI</button>
+    <br>
+    <div id="rezultatai1"></div>
+  </div>
+
+  <!-- 4 uzduotis --Amzius------------------->
   <div class="amzius">
   <h1>Amžiaus konvertavimas</h1>
   <label for="amzius">Įveskite amžių metais:</label>
@@ -24,6 +38,9 @@
   <p><input id="c" onkeyup="tempKeitimas('C')"> C</p>
   <p><input id="f" onkeyup="tempKeitimas('F')"> F</p> 
 </div>
+
+
+
   <script src="test.js"></script>
 </body>
 </html>
