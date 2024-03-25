@@ -5,6 +5,26 @@ Pritaikykite savo sukurtą funkciją ir išspausdinkite atitikmenį
 doleriais.
 */
 
+function eurosToDollars(euros) {
+  const valiutukuras = 1.08 // https://www.bankai.lt/valiutos/valiutu-kursai/usd
+  const dollars = euros * valiutukuras
+  return dollars
+}
+
+const bentkiekEuro = Math.floor(Math.random() * 1000) + 1  //atsitiktinis kikis euro
+const dollars = eurosToDollars(bentkiekEuro)  // 
+console.log(bentkiekEuro + " EUR yra " + dollars.toFixed(2) + " USD") 
+
+
+
+
+
+
+
+
+
+
+
 /*
 2. Sukurkite funkciją, kuri paverstų dolerius į eurus.
 Sugeneruokite atsitiktinį skaičių (dolerių sumą) nuo 1 iki 1000.
@@ -33,6 +53,10 @@ dienomis.
 5. Parašykite programą, kuri konvertuos termometro
 duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 */
+
+
+
+
 
 /*
 6. Sukurkite kodą, kuris išspausdins į konsolę
