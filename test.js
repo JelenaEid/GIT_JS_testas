@@ -81,7 +81,7 @@ duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 */
 
 function tempKeitimas(laipsniai) {
-  let oras;
+  let oras
   if (laipsniai == "C") {
     oras = document.getElementById("c").value * 9 / 5 + 32
     document.getElementById("f").value = Math.round(oras)
@@ -116,11 +116,11 @@ console.log(numbers)
 */
 
 for (let i = 1; i <= 5; i++) {
-  let linija = '';
+  let linija = ''
   for (let zvaigzdute = 1; zvaigzdute <= i; zvaigzdute++) {
-    linija += '*';
+    linija += '*'
   }
-  console.log(linija);
+  console.log(linija)
 }
 
 // /*
