@@ -12,8 +12,8 @@ function eurosToDollars(euros) {
 }
 
 const bentkiekEuro = Math.floor(Math.random() * 1000) + 1  //atsitiktinis kiekis euro
-const dollars = eurosToDollars(bentkiekEuro)  
-console.log(bentkiekEuro + " EUR yra " + dollars.toFixed(2) + " USD") 
+const dollars = eurosToDollars(bentkiekEuro)
+console.log(bentkiekEuro + " EUR yra " + dollars.toFixed(2) + " USD")
 
 
 /*
@@ -56,33 +56,53 @@ pasakytų kiek tai yra sekundėmis, minutėmis, valandomis,
 dienomis.
 */
 
+function konvertuoti() {
+  const amzius = parseInt(document.getElementById('amzius').value);
 
+  const sekundes = amzius * 365 * 24 * 60 * 60;
+  const minutes = amzius * 365 * 24 * 60;
+  const valandos = amzius * 365 * 24;
+  const dienos = amzius * 365;
 
-
-
-
+  const rezultatai = `
+    <h2>Rezultatai:</h2>
+    <p>Amžius: ${amzius} metai</p>
+    <p>Sekundės: ${sekundes}</p>
+    <p>Minutės: ${minutes}</p>
+    <p>Valandos: ${valandos}</p>
+    <p>Dienos: ${dienos}</p>`
+  
+  document.getElementById('rezultatai').innerHTML = rezultatai;
+}
 
 /*
 5. Parašykite programą, kuri konvertuos termometro
 duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 */
 
-    function tempKeitimas(laipsniai) {
-      let oras;
-      if (laipsniai == "C") {
-          oras = document.getElementById("c").value * 9/5 + 32;
-          document.getElementById("f").value = Math.round(oras);
-      } else {
-          oras = (document.getElementById("f").value - 32) * 5/9;
-          document.getElementById("c").value = Math.round(oras);
-      }
+function tempKeitimas(laipsniai) {
+  let oras;
+  if (laipsniai == "C") {
+    oras = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = Math.round(oras);
+  } else {
+    oras = (document.getElementById("f").value - 32) * 5 / 9;
+    document.getElementById("c").value = Math.round(oras);
   }
+}
 
 /*
 6. Sukurkite kodą, kuris išspausdins į konsolę
 1-2-3-4-5-6-7-8-9-10 vienoje eilutėje. Prieš vienetą ir po
 dešimties neturėtų būti brūkšniuko.
 */
+
+
+
+
+
+
+
 
 /*
 7. Panaudokite for ciklus, kad sukurtumėte tokį vaizdą konsolėje.
@@ -94,12 +114,13 @@ dešimties neturėtų būti brūkšniuko.
 */
 
 for (let i = 1; i <= 5; i++) {
-    let linija = '';
-    for (let zvaigzdute = 1; zvaigzdute <= i; zvaigzdute++) {
-        linija += '*';
-    }
-    console.log(linija);
+  let linija = '';
+  for (let zvaigzdute = 1; zvaigzdute <= i; zvaigzdute++) {
+    linija += '*';
+  }
+  console.log(linija);
 }
+
 // /*
 // 8. Parašykite kodą, kuris apskaičiuos kiek liko dienų iki Kalėdų.
 // */
@@ -108,9 +129,9 @@ function dienuIkiKaledu() {  //new datos objektas
   const Kaledos = new Date(siandien.getFullYear(), 11, 25) //new datos objektas Kaledos (0 - sausis, 11 - gruodis)
 
   if (siandien.getMonth() === 11 && siandien.getDate() > 25) { //tikriname ar Kaledos parametrai jau buvo --> 11 , 25 
-      Kaledos.setFullYear(Kaledos.getFullYear() + 1) // jei buvo pridedami dar 1 kalendorini metai
+    Kaledos.setFullYear(Kaledos.getFullYear() + 1) // jei buvo pridedami dar 1 kalendorini metai
   }
-  
+
   const vienaDiena = 1000 * 60 * 60 * 24; // vienos deinos parametras iki milisekundziu
   const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ir Kaledos
   return dienosIkiKaledu
@@ -118,6 +139,7 @@ function dienuIkiKaledu() {  //new datos objektas
 
 const likoIkiKaledu = dienuIkiKaledu()
 console.log(`Iki Kalėdų liko ${likoIkiKaledu} dienų.`)
+
 
 /*
 9. Parašykite kodą, kuris apjungia masyvo duomenis į vieną
@@ -133,12 +155,6 @@ console.log(sintaksisKalblelis)
 
 let sintaksisPliusas = vardai.join("+")
 console.log(sintaksisPliusas)
-
-
-
-
-
-
 
 
 /*
