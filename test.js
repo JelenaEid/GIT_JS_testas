@@ -22,16 +22,15 @@ Sugeneruokite atsitiktinį skaičių (dolerių sumą) nuo 1 iki 1000.
 Pritaikykite savo sukurtą funkciją ir išspausdinkite atitikmenį
 eurais.
 */
+function dollarsToEuros(dollariai) {
+  const kursas = 0.92; // https://www.bankai.lt/valiutos/valiutu-kursai/usd
+  const eurosskaiciuokle = dollariai * kursas
+  return eurosskaiciuokle
+}
 
-
-
-
-
-
-
-
-
-
+const atsitiktinisDoleriuKiekis = Math.floor(Math.random() * 1000) + 1
+const eurai = dollarsToEuros(atsitiktinisDoleriuKiekis)
+console.log(atsitiktinisDoleriuKiekis + " USD yra " + eurai.toFixed(2) + " EUR")
 
 /*
 3. Parašykite programą, kuri suskaičiuotų žmogaus BMI (body
@@ -43,9 +42,6 @@ Viršsvoris = BMI > 25
 Normalu = 18.5 <= BMI < 25
 Per mažas svoris = BMI < 18.5
 */
-
-
-
 
 
 
@@ -71,16 +67,16 @@ dienomis.
 duomenis iš Farenheito į Celsijų, ir atvirkščiai.
 */
 
-    function tempKeitimas(laipsniai) {
-      let oras;
-      if (laipsniai == "C") {
-          oras = document.getElementById("c").value * 9/5 + 32;
-          document.getElementById("f").value = Math.round(oras);
-      } else {
-          oras = (document.getElementById("f").value - 32) * 5/9;
-          document.getElementById("c").value = Math.round(oras);
-      }
-  }
+  //   function tempKeitimas(laipsniai) {
+  //     let oras;
+  //     if (laipsniai == "C") {
+  //         oras = document.getElementById("c").value * 9/5 + 32;
+  //         document.getElementById("f").value = Math.round(oras);
+  //     } else {
+  //         oras = (document.getElementById("f").value - 32) * 5/9;
+  //         document.getElementById("c").value = Math.round(oras);
+  //     }
+  // }
 
 /*
 6. Sukurkite kodą, kuris išspausdins į konsolę
@@ -97,31 +93,31 @@ dešimties neturėtų būti brūkšniuko.
 *****
 */
 
-for (let i = 1; i <= 5; i++) {
-    let linija = '';
-    for (let zvaigzdute = 1; zvaigzdute <= i; zvaigzdute++) {
-        linija += '*';
-    }
-    console.log(linija);
-}
-/*
-8. Parašykite kodą, kuris apskaičiuos kiek liko dienų iki Kalėdų.
-*/
-function dienuIkiKaledu() {  //new datos objektas 
-  const siandien = new Date() //sios dienos data
-  const Kaledos = new Date(siandien.getFullYear(), 11, 25) //new datos objektas Kaledos (0 - sausis, 11 - gruodis)
+// for (let i = 1; i <= 5; i++) {
+//     let linija = '';
+//     for (let zvaigzdute = 1; zvaigzdute <= i; zvaigzdute++) {
+//         linija += '*';
+//     }
+//     console.log(linija);
+// }
+// /*
+// 8. Parašykite kodą, kuris apskaičiuos kiek liko dienų iki Kalėdų.
+// */
+// function dienuIkiKaledu() {  //new datos objektas 
+//   const siandien = new Date() //sios dienos data
+//   const Kaledos = new Date(siandien.getFullYear(), 11, 25) //new datos objektas Kaledos (0 - sausis, 11 - gruodis)
 
-  if (siandien.getMonth() === 11 && siandien.getDate() > 25) { //tikriname ar Kaledos parametrai jau buvo --> 11 , 25 
-      Kaledos.setFullYear(Kaledos.getFullYear() + 1) // jei buvo pridedami dar 1 kalendorini metai
-  }
+//   if (siandien.getMonth() === 11 && siandien.getDate() > 25) { //tikriname ar Kaledos parametrai jau buvo --> 11 , 25 
+//       Kaledos.setFullYear(Kaledos.getFullYear() + 1) // jei buvo pridedami dar 1 kalendorini metai
+//   }
   
-  const vienaDiena = 1000 * 60 * 60 * 24; // vienos deinos parametras iki milisekundziu
-  const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ir Kaledos
-  return dienosIkiKaledu
-}
+//   const vienaDiena = 1000 * 60 * 60 * 24; // vienos deinos parametras iki milisekundziu
+//   const dienosIkiKaledu = Math.ceil((Kaledos.getTime() - siandien.getTime()) / vienaDiena) //skirtumas tarp sios deinos ir Kaledos
+//   return dienosIkiKaledu
+// }
 
-const likoIkiKaledu = dienuIkiKaledu()
-console.log(`Iki Kalėdų liko ${likoIkiKaledu} dienų.`)
+// const likoIkiKaledu = dienuIkiKaledu()
+// console.log(`Iki Kalėdų liko ${likoIkiKaledu} dienų.`)
 
 /*
 9. Parašykite kodą, kuris apjungia masyvo duomenis į vieną
@@ -130,13 +126,13 @@ Tomas,Dainius,Paulius,Jonas
 Tomas+Dainius+Paulius+Jonas
 */
 
-let vardai = ["Tomas", "Dainius", "Paulius", "Jonas"]
+// let vardai = ["Tomas", "Dainius", "Paulius", "Jonas"]
 
-let sintaksisKalblelis = vardai.join(",")
-console.log(sintaksisKalblelis)
+// let sintaksisKalblelis = vardai.join(",")
+// console.log(sintaksisKalblelis)
 
-let sintaksisPliusas = vardai.join("+")
-console.log(sintaksisPliusas)
+// let sintaksisPliusas = vardai.join("+")
+// console.log(sintaksisPliusas)
 
 
 
